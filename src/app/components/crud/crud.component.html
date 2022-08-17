@@ -1,0 +1,52 @@
+<p-card>
+  <ng-template pTemplate="header">
+      Header content here
+  </ng-template>
+  <div class="crud">
+    <div class="field">
+      <span class="p-float-label">
+        <p-inputMask id="float-input"  class="cpf" mask="999.999.999-99" slotChar=" "></p-inputMask>
+        <label for="float-input">CPF</label>
+      </span>
+    </div>
+    <div class="field">
+      <span class="p-float-label">
+        <input id="float-input" type="text" [ngClass]="{'ng-invalid ng-dirty':valid}" pInputText>
+        <label for="float-input">Username</label>
+      </span>
+    </div>
+    <div class="field">
+      <span class="p-float-label">
+        <input id="float-input" type="text" [ngClass]="{'ng-invalid ng-dirty':valid}"  pInputText>
+        <label for="float-input">Username</label>
+      </span>
+    </div>
+    <div class="field">
+      <span class="p-float-label">
+        <input id="float-input" type="text" [ngClass]="{'ng-invalid ng-dirty':valid}"  pInputText>
+        <label for="float-input">Username</label>
+      </span>
+    </div>
+    <div class="field">
+      <span class="p-float-label">
+        <input id="float-input" type="text" [ngClass]="{'ng-invalid ng-dirty':valid}"  pInputText>
+        <label for="float-input">Username</label>
+      </span>
+    </div>
+    <div class="field">
+      <span class="p-float-label">
+        <input id="float-input" type="text" [ngClass]="{'ng-invalid ng-dirty':valid}"  pInputText>
+        <label for="float-input">Username</label>
+      </span>
+    </div>
+    <div class="field">
+      <span class="p-float-label">
+        <input id="float-input" type="text" [ngClass]="{'ng-invalid ng-dirty':valid}"  pInputText>
+        <label for="float-input">Username</label>
+      </span>
+    </div>
+   </div>
+  <ng-template pTemplate="footer">
+    <button pButton type="button" label="Click" (click)="validator()"></button>
+  </ng-template>
+</p-card>
