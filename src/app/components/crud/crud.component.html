@@ -1,52 +1,84 @@
 <p-card>
   <ng-template pTemplate="header">
-      Header content here
+      <h3>Dados Pessoais Participante</h3>
   </ng-template>
-  <div class="crud">
-    <div class="field">
-      <span class="p-float-label">
-        <p-inputMask id="float-input"  class="cpf" mask="999.999.999-99" slotChar=" "></p-inputMask>
-        <label for="float-input">CPF</label>
-      </span>
+  <form [formGroup]="form">
+    <div class="crud">
+      <div class="cpf field">
+        <span class="p-float-label label">
+          <p-inputMask
+            id="cpf"
+            formControlName="NumeroCPF"
+            mask="999.999.999-99"
+            [ngClass]="{'ng-invalid ng-dirty':form.controls['NumeroCPF'].invalid}" ></p-inputMask>
+          <label for="cpf">CPF</label>
+        </span>
+      </div>
+      <div class="nome field">
+        <span class="p-float-label label">
+          <input
+            id="NomeEntidade"
+            formControlName="NomeEntidade"
+            type="text"
+            [ngClass]="{'ng-invalid ng-dirty':form.controls['NomeEntidade'].invalid, 'fieldNome':true}" pInputText>
+          <label for="NomeEntidade">Nome Entidade</label>
+        </span>
+      </div>
+      <div class="nome field">
+        <span class="p-float-label label">
+          <input
+            id="NomePreferido"
+            formControlName="NomePreferido"
+            type="text"
+            [ngClass]="{'ng-invalid ng-dirty':form.controls['NomePreferido'].invalid, 'fieldNome':true}" pInputText>
+          <label for="NomePreferido">Nome Preferido</label>
+        </span>
+      </div>
+      <div class="data field">
+        <span class="p-float-label">
+          <p-calendar
+            id="DataNascimento"
+            formControlName="DataNascimento"
+            [showIcon]="true"
+            inputId="icon"
+            [ngClass]="{'ng-invalid ng-dirty':form.controls['DataNascimento'].invalid}"></p-calendar>
+          <label for="DataNascimento">Data Nascimento</label>
+        </span>
+      </div>
+      <div class="data field">
+        <span class="p-float-label">
+          <p-calendar
+            id="DataObito"
+            formControlName="DataObito"
+            [showIcon]="true"
+            inputId="icon"
+            [ngClass]="{'ng-invalid ng-dirty':form.controls['DataObito'].invalid}"></p-calendar>
+          <label for="DataObito">Data Obito</label>
+        </span>
+      </div>
+      <div class="nome field">
+        <span class="p-float-label">
+          <input
+            id="NomeMae"
+            formControlName="NomeMae"
+            type="text"
+            [ngClass]="{'ng-invalid ng-dirty':form.controls['NomeMae'].invalid, 'fieldNome':true}" pInputText>
+          <label for="NomeMae">Nome Mãe</label>
+        </span>
+      </div>
+      <div class="nome field">
+        <span class="p-float-label">
+          <input
+            id="NomePai"
+            formControlName="NomePai"
+            type="text"
+            [ngClass]="{'ng-invalid ng-dirty':form.controls['NomePai'].invalid, 'fieldNome':true}" pInputText>
+          <label for="NomePai">Nome Pai</label>
+        </span>
+      </div>
     </div>
-    <div class="field">
-      <span class="p-float-label">
-        <input id="float-input" type="text" [ngClass]="{'ng-invalid ng-dirty':valid}" pInputText>
-        <label for="float-input">Username</label>
-      </span>
-    </div>
-    <div class="field">
-      <span class="p-float-label">
-        <input id="float-input" type="text" [ngClass]="{'ng-invalid ng-dirty':valid}"  pInputText>
-        <label for="float-input">Username</label>
-      </span>
-    </div>
-    <div class="field">
-      <span class="p-float-label">
-        <input id="float-input" type="text" [ngClass]="{'ng-invalid ng-dirty':valid}"  pInputText>
-        <label for="float-input">Username</label>
-      </span>
-    </div>
-    <div class="field">
-      <span class="p-float-label">
-        <input id="float-input" type="text" [ngClass]="{'ng-invalid ng-dirty':valid}"  pInputText>
-        <label for="float-input">Username</label>
-      </span>
-    </div>
-    <div class="field">
-      <span class="p-float-label">
-        <input id="float-input" type="text" [ngClass]="{'ng-invalid ng-dirty':valid}"  pInputText>
-        <label for="float-input">Username</label>
-      </span>
-    </div>
-    <div class="field">
-      <span class="p-float-label">
-        <input id="float-input" type="text" [ngClass]="{'ng-invalid ng-dirty':valid}"  pInputText>
-        <label for="float-input">Username</label>
-      </span>
-    </div>
-   </div>
+  </form>
   <ng-template pTemplate="footer">
-    <button pButton type="button" label="Click" (click)="validator()"></button>
+    <button pButton type="submit" label="Click" (click)="enviarForm()"></button>
   </ng-template>
 </p-card>

@@ -9,7 +9,15 @@ div.crud{
 div.crud > div.field{
   padding-right: 10px;
   padding-top: 25px;
+  flex-grow: 1;
 }
-.cpf{
-  width: 50px;
+.fieldNome{
+  width: 30vw;
+  min-width: 246px;
+}
+.label{
+  width: 100%;
+}
+input{
+  width: 100%;
 }

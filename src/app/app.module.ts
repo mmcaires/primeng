@@ -11,6 +11,8 @@ import {InputTextModule} from 'primeng/inputtext';
 import {InputNumberModule} from 'primeng/inputnumber';
 import {InputMaskModule} from 'primeng/inputmask';
 import {ButtonModule} from 'primeng/button';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {CalendarModule} from 'primeng/calendar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,10 @@ import {ButtonModule} from 'primeng/button';
     InputTextModule,
     InputNumberModule,
     InputMaskModule,
-    ButtonModule
+    ButtonModule,
+    ReactiveFormsModule,
+    FormsModule,
+    CalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
